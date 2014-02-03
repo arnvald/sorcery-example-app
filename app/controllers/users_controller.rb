@@ -42,7 +42,7 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.xml
   def create
-    @user = User.new(params[:user])
+    @user = User.new(user_params)
 
     respond_to do |format|
       if @user.save
@@ -61,7 +61,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
 
     respond_to do |format|
-      if @user.update_attributes(params[:user])
+      if @user.update_attributes(user_params)
         format.html { redirect_to(@user, :notice => 'User was successfully updated.') }
         format.xml  { head :ok }
       else
@@ -96,5 +96,9 @@ class UsersController < ApplicationController
   # And this action redirects and sets a success notice.
   def login_from_http_basic
     redirect_to users_path, :notice => 'Login from basic auth successful'
+  end
+
+  def user_params
+    params.require(:user).permit(:email, :password, :password_confirmation, :providers_attributes)
   end
 end

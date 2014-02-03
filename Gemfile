@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.9'
-gem 'mysql2', '0.2.11'
+gem 'rails', '4.0.2'
+gem 'mysql2', '0.3.11'
 # Deploy with Capistrano
 # gem 'capistrano'
 
@@ -10,13 +10,13 @@ gem 'mysql2', '0.2.11'
 
 
 # Bundle the extra gems:
-gem 'sorcery', '0.7.4'
+gem 'sorcery', '0.8.5'
 
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
 group :development, :test do
   gem "test-unit", "~> 2.3.0"
-  gem "rspec", "~> 2.5.0"
-  gem 'rspec-rails', "~> 2.5.0"
+  gem "rspec", "~> 3.0.0.beta1"
+  gem 'rspec-rails', "~> 3.0.0.beta"
 end
