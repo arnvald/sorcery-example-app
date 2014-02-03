@@ -17,6 +17,4 @@ gem 'sorcery', '0.8.5'
 # and rake tasks are available in development mode:
 group :development, :test do
   gem "test-unit", "~> 2.3.0"
-  gem "rspec", "~> 3.0.0.beta1"
-  gem 'rspec-rails', "~> 3.0.0.beta"
 end
