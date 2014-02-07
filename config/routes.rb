@@ -13,13 +13,13 @@ Collaboration::Application.routes.draw do
   resources :user_sessions
   resources :password_resets
   
-  match 'login' => 'user_sessions#new', :as => :login
-  match 'logout' => 'user_sessions#destroy', :as => :logout
+  get 'login' => 'user_sessions#new', :as => :login
+  match 'logout' => 'user_sessions#destroy', :as => :logout, via: [:get, :delete]
   
   resource :oauth do
     get :callback
   end
-  match "oauth/:provider" => "oauths#oauth", :as => :auth_at_provider
+  get "oauth/:provider" => "oauths#oauth", :as => :auth_at_provider
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

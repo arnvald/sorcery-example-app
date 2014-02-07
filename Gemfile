@@ -1,8 +1,8 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.9'
-gem 'mongoid', '2.0.2'
-gem 'bson_ext', '1.3.0'
+gem 'rails', '~> 4.0'
+gem 'mongoid', git: 'https://github.com/mongoid/mongoid.git' #3.0 does not support rails 4
+
 # Deploy with Capistrano
 # gem 'capistrano'
 
@@ -11,13 +11,11 @@ gem 'bson_ext', '1.3.0'
 
 
 # Bundle the extra gems:
-gem 'sorcery', '0.6.1'
+gem 'sorcery', '0.8.5'
 
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
 group :development, :test do
   gem "test-unit", "~> 2.3.0"
-  gem "rspec", "~> 2.5.0"
-  gem 'rspec-rails', "~> 2.5.0"
 end

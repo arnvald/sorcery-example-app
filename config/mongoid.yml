@@ -1,7 +1,13 @@
 development:
-  host: localhost
-  database: app_root_development
+  sessions:
+    default:
+      database: collaboration_development
+      hosts:
+        - localhost:27017
 
 test:
-  host: localhost
-  database: app_root_test
+  sessions:
+    default:
+      database: collaboration_test
+      hosts:
+        - localhost:27017
