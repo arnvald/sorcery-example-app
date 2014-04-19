@@ -8,6 +8,21 @@ GIT
       origin (~> 2.1)
       tzinfo (>= 0.3.37)
 
+PATH
+  remote: ~/Projects/os/sorcery
+  specs:
+    sorcery (0.8.5)
+      bcrypt (>= 3.1)
+      oauth (~> 0.4.4)
+      oauth2 (>= 0.8.0, < 1.0.0)
+
+PATH
+  remote: ~/Projects/os/sorcery-mongoid
+  specs:
+    sorcery-mongoid (0.0.1)
+      mongoid (> 3.0)
+      sorcery
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -37,7 +52,7 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.2)
     atomic (1.1.14)
-    bcrypt-ruby (3.1.2)
+    bcrypt (3.1.7)
     bson (2.2.0)
     builder (3.1.4)
     connection_pool (1.2.0)
@@ -87,10 +102,6 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.1.1)
-    sorcery (0.8.5)
-      bcrypt-ruby (>= 3.0)
-      oauth (~> 0.4.4)
-      oauth2 (>= 0.8.0, < 1.0.0)
     sprockets (2.10.1)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -116,5 +127,6 @@ PLATFORMS
 DEPENDENCIES
   mongoid!
   rails (~> 4.0)
-  sorcery (= 0.8.5)
+  sorcery!
+  sorcery-mongoid!
   test-unit (~> 2.3.0)
